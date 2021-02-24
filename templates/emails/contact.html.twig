@@ -1,0 +1,13 @@
+<table>
+    <tr>
+    <td> {{contact.firstname }} ;</td>
+    <td> {{contact.lastname }} ;</td>
+    <td> {{contact.phone }} ;</td>
+    </tr>
+    <td> {{contact.message }} ;</td>
+    <td> {{contact.email }} ;</td>
+    </tr>
+</tr>
+    <td><a href="{{url('property.show', {id: contact.property.id, slug: contact.property.slug})}}">{{contact.property.title}}</a></td>
+</tr>
+</table>
