@@ -17,4 +17,13 @@ class HomeController extends  AbstractController
         $properties = $repository->findLatest();
         return $this->render("pages/home.html.twig", ['current_menu' => 'main', 'properties' => $properties]);
     }
+
+    /**
+     * @Route("/about", name="about")
+     */
+    public function about(PropertyRepository $repository): Response
+    {
+        $properties = $repository->findLatest();
+        return $this->render("pages/about.html.twig");
+    }
 }

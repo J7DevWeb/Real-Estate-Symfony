@@ -21,7 +21,7 @@
     <body>
 
      
-        <nav class="navbar navbar-expand-lg color">
+        <nav class="navbar navbar-expand-lg navbar-dark color">
   <div class="container-fluid">
     <a class="navbar-brand" href="{{ path('home') }}">Mon agence</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,9 +49,11 @@
 
         {% block body %}
         {% endblock %}
-
-        {% block footer %}
-        <p class="footer">&copy copyright 2021  Agence Immobilière Tous droits r&eacute;serv&eacute;s.</p>
-        {% endblock %}
     </body>
+
+            {% block footer %}
+        <div class="footer">
+          <p>&copy copyright 2021  Agence Immobilière Tous droits r&eacute;serv&eacute;s.</p>
+        </div>
+        {% endblock %}
 </html>

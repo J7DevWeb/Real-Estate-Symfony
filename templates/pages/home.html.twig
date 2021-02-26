@@ -4,15 +4,21 @@
 
 {% block body %}
 
-<div class="container">
-<h1> Agence immobilière </h1> 
+<div class="header">
+    <div class="overlay">
+        <h1>Agence immobilière</h1>
+        <h4>Reasons for Choosing US</h4>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero nostrum quis, odio veniam itaque ullam debitis qui magnam consequatur ab. Vero nostrum quis, odio veniam itaque ullam debitis qui magnam consequatur ab.</p>
+        <br>
+        <a class="btn btn-info" href="{{ path('about') }}">A propos de l'agence</a>
+    </div>
 </div>
 
 <div class="container"> 
     <h2>Les derniers biens</h2>
     <div class="row flex">
         {% for property in properties %}
-            <div class="col-3">
+            <div class="col-md-4">
                 {% if property.filename %}
                      <img src="{{ vich_uploader_asset(property, 'imageFile') | imagine_filter('thumb') }}" alt="Image du bien à la une" class="card-img-top">
                  {% else %}

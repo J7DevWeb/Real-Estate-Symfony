@@ -37,6 +37,11 @@ class PropertyController extends AbstractController
         $form = $this->createForm(PropertySearchType::class, $search);
         $form->handleRequest($request);
         $properties = $this->repository->findAllVisible($search);
+
+        if ($properties == []) {
+            $properties = $this->repository->findLatest();
+        }
+
         return $this->render("property/index.html.twig", ['current_menu' => 'properties', 'properties' => $properties, 'form' => $form->createView()]);
     }
 

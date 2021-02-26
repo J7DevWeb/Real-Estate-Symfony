@@ -1,4 +1,4 @@
-<div class="card mb-4">
+<div class="card border-dark mb-4">
     {% if property.filename %}
         <img src="{{ vich_uploader_asset(property, 'imageFile') | imagine_filter('thumb') }}" alt="Image du bien à la une" class="card-img-top">
         {% else %}

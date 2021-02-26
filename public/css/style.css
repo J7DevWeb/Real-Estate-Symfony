@@ -5,7 +5,7 @@
 
 body {
   background-color: rgb(171, 145, 196);
-  min-height: 95vh;
+  min-height: 95%;
   font-size: 1.2em;
 }
 
@@ -21,10 +21,93 @@ body {
 
 .footer {
   position: absolute;
-  top: 95vh;
-  height: 5vh;
+  margin-top: 100px;
+  min-height: 5vh;
+  width: 99%;
+}
+
+.footer > p {
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
-  width: 100%;
+  width: 50%;
+  border-radius: 42%;
   color: antiquewhite;
   background-color: black;
+}
+
+.header {
+  background-color: black;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0 0 85% 85% / 30%;
+}
+.header .overlay {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  color: antiquewhite;
+  text-shadow: 1px 2px 2px rgb(171, 145, 196);
+}
+
+/* ==========================
+
+    About
+
+=============================*/
+.about {
+  text-align: center;
+}
+.about > * {
+  margin: 10px;
+}
+
+.animate-border {
+  position: relative;
+  display: block;
+  width: 50%;
+  height: 4px;
+  background: antiquewhite;
+  border-radius: 35%;
+  margin-left: 25%;
+}
+
+.animate-border:after {
+  position: absolute;
+  content: "";
+  width: 42px;
+  height: 4px;
+  left: 0;
+  bottom: 0;
+  border-left: 10px solid rgb(171, 145, 196);
+  border-right: 10px solid rgb(171, 145, 196);
+  -webkit-animation: animborder 21s linear alternate infinite;
+  animation: animborder 21s linear alternate infinite;
+}
+
+@-webkit-keyframes animborder {
+  0% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateX(113px);
+    transform: translateX(113px);
+  }
+}
+
+@keyframes animborder {
+  0% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateX(1130px);
+    transform: translateX(1130px);
+  }
 }
